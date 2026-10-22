@@ -18,15 +18,11 @@ Updated to run on current IW4x builds (tested on r5154 server / r5278 client).
 1. Copy the `gungame` folder to `<IW4x install>/mods/`.
 2. Start the game or a dedicated server with `fs_game mods/gungame2`.
 
-> **Note:** don't put `#` in the folder name. Current IW4x rejects it.
-
 Example dedicated server launch:
 
 ```
 iw4x.exe -dedicated +set fs_game mods/gungame2 +set net_port 28960 +exec server.cfg +map_rotate
 ```
-
-**Clients must also run the mod** (`fs_game mods/gungame2`). Without it the client lacks the map effect scripts for the singleplayer maps and logs errors, and may crash.
 
 ## Settings
 

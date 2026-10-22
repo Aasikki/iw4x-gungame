@@ -15,7 +15,7 @@ Updated to run on current IW4x builds (tested on r5154 server / r5278 client).
 
 ## Installation
 
-1. Copy the `gungame2` folder to `<IW4x install>/mods/`.
+1. Copy the `gungame` folder to `<IW4x install>/mods/`.
 2. Start the game or a dedicated server with `fs_game mods/gungame2`.
 
 > **Note:** don't put `#` in the folder name. Current IW4x rejects it.

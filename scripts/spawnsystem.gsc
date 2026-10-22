@@ -210,6 +210,7 @@ customSpawn()
 }
 setNewSpawn()
 {
+	spawnPoint = undefined;
 	for(i = 0; i < 20; i++)
 	{
 		spawnPoint = level.spawnPoints[randomInt(level.spawnPoints.size)];

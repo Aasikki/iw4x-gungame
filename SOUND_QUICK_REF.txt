@@ -1,0 +1,132 @@
+╔════════════════════════════════════════════════════════════════════╗
+║            Audio Mastering Quick Reference                          ║
+║            Gungame v1.1 Killstreak Sounds                           ║
+╚════════════════════════════════════════════════════════════════════╝
+
+TL;DR - Golden Rules
+════════════════════════════════════════════════════════════════════
+
+  ✓ Bit Depth:        16-bit PCM WAV
+  ✓ Sample Rate:      8000 Hz or 44100 Hz
+  ✓ Channels:         Mono (preferred) or Stereo
+  ✓ Duration:         0.5–2 seconds
+  ✓ Peak Level:       -6 to -3 dB (NO clipping)
+  ✓ RMS Level:        -18 to -15 dB
+  ✓ Tone:             UI/game sound (sharp, clear, 500 Hz–8 kHz focus)
+
+════════════════════════════════════════════════════════════════════
+
+Reference File: Original Game Sound
+────────────────────────────────────────────────────────────────────
+
+  Location:   scriptdata/streaksounds/reference.wav
+  Source:     ui_suitcase_bomb_counter.wav (IW4x common_mp zone)
+  Purpose:    Loudness & tone template for your custom sounds
+  Use it:     Compare waveforms & listen to match volume/character
+
+════════════════════════════════════════════════════════════════════
+
+Killer Sound Checklist
+────────────────────────────────────────────────────────────────────
+
+  □ Starts quickly (trim silence at beginning & end)
+  □ 0.5–2 seconds long
+  □ Peak level at -3 to -6 dB (visual waveform)
+  □ No digital clipping or distortion
+  □ Sounds punchy and clear
+  □ Fits CoD4 sci-fi / military vibe
+  □ Matches loudness of reference.wav
+  □ 16-bit, 8000+ Hz sample rate
+  □ Mono or Stereo WAV format
+
+════════════════════════════════════════════════════════════════════
+
+File Naming Template
+────────────────────────────────────────────────────────────────────
+
+  Format:   killstreak_name.wav
+
+  Examples:
+    - speed.wav
+    - godmode.wav
+    - juggernaut.wav
+    - xray.wav
+    - jetpack.wav
+    - norecoil.wav
+
+════════════════════════════════════════════════════════════════════
+
+Export Settings (Audacity, Reaper, Logic, etc.)
+────────────────────────────────────────────────────────────────────
+
+  File Format:     WAV (Microsoft WAV)
+  Encoding:        PCM, 16-bit
+  Sample Rate:     44100 Hz (or 8000 Hz)
+  Channels:        Mono (1) or Stereo (2)
+  Output Name:     <killstreak_name>.wav
+
+════════════════════════════════════════════════════════════════════
+
+Loudness Sweet Spot
+────────────────────────────────────────────────────────────────────
+
+  Target Peak:    -3 dB
+  Acceptable:     -6 dB to -3 dB
+  Too Loud:       ≥ 0 dB (clipping/distortion) ✗
+  Too Quiet:      ≤ -10 dB ✗
+
+════════════════════════════════════════════════════════════════════
+
+Comparison Workflow (Use Reference Sound)
+────────────────────────────────────────────────────────────────────
+
+  1. Open scriptdata/streaksounds/reference.wav in your DAW
+  2. Load your custom sound in another track
+  3. Compare waveform amplitude visually (should be similar)
+  4. Use meter/analyzer: peak = -3 to -6 dB, RMS = -18 to -15 dB
+  5. Listen: Does your sound match the tone/clarity of reference?
+  6. Iterate: Adjust EQ/levels until they're similar
+  7. Export: Save as WAV (16-bit, 44100 Hz)
+
+════════════════════════════════════════════════════════════════════
+
+Installation Workflow
+────────────────────────────────────────────────────────────────────
+
+  1. Create your sound file (following specs above)
+  2. Copy to: mods/gungame/scriptdata/streaksounds/<name>.wav
+  3. Run: build-streak-sounds.ps1
+  4. Rebuild: zonebuilder (buildzone mod)
+  5. Test: Start server with fs_game mods/gungame
+
+════════════════════════════════════════════════════════════════════
+
+Killstreak Names (13 Total)
+────────────────────────────────────────────────────────────────────
+
+  riotshield       (heavy, metallic, defensive)
+  norecoil         (smooth, controlled, mechanical)
+  speed            (sharp, electric, quick)
+  glsentry         (beep-beep targeting)
+  suicidebomber    (warning/alarm tone)
+  jetpack          (whoosh, thruster, ascending)
+  bomber           (explosion or impact)
+  ims              (robotic, targeting beep)
+  juggernaut       (deep, powerful, heavy)
+  explosivebullets (crackle, electrical, chaos)
+  radioactive      (sci-fi, pulse, danger)
+  xray             (tech scan, ping, reveal)
+  godmode          (triumphant, power-up, godlike)
+
+════════════════════════════════════════════════════════════════════
+
+For Full Technical Details
+────────────────────────────────────────────────────────────────────
+
+  👉 See SOUNDREF.md
+
+════════════════════════════════════════════════════════════════════
+
+Last Updated: Oct 22, 2026
+Reference Source: IW4x common_mp zone
+Mod Version: v1.1 (custom_sounds branch)
